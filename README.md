@@ -9,13 +9,13 @@ To Do list in DevelopmentNotes.md https://github.com/arnaucode/goBlockchainDataA
 ### Install
 1. Nodejs & NPM https://nodejs.org/ --> to get npm packages for the web
 2. MongoDB https://www.mongodb.com/
-3. Faircoin wallet https://download.faircoin.world/, or the Cryptocurrency desired wallet
+3. lyra wallet https://download.lyra.world/, or the Cryptocurrency desired wallet
 4. goBlockchainDataAnalysis https://github.com/arnaucode/goBlockchainDataAnalysis
 
 ### Configure
-- Wallet /home/user/.faircoin2/faircoin.conf:
+- Wallet /home/user/.lyra/lyra.conf:
 ```
-rpcuser=faircoinrpc
+rpcuser=lyrarpc
 rpcpassword=password
 rpcport=3021
 rpcworkqueue=2000
@@ -27,12 +27,12 @@ rpcallowip=127.0.0.1
 - goBlockchainDataAnalysis/config.json:
 ```json
 {
-    "user": "faircoinrpc",
+    "user": "lyrarpc",
     "pass": "password",
     "host": "127.0.0.1",
-    "port": "3021",
-	"genesisTx": "7c27ade2c28e67ed3077f8f77b8ea6d36d4f5eba04c099be3c9faa9a4a04c046",
-	"genesisBlock": "beed44fa5e96150d95d56ebd5d2625781825a9407a5215dd7eda723373a0a1d7",
+    "port": "42223",
+	"genesisTx": "2346f9c436d961bf4f5a3818f60154e15ddd056d59f05b270240d0837d15daa5",
+	"genesisBlock": "e2aacf31ce196903e00157a50d207d04a152176b4eb83ecbb0b75b0c9455d1fd",
     "startFromBlock": 0,
     "server": {
         "serverIP": "127.0.0.1",
@@ -59,7 +59,7 @@ sudo service mongod start
 
 2. Start wallet
 ```
-./faircoind -txindex -reindex-chainstate
+./lyrad -txindex -reindex-chainstate
 ```
 Wait until the entire blockchain is downloaded.
 
